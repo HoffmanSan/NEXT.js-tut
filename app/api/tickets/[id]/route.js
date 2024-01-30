@@ -10,6 +10,6 @@ export async function DELETE(_, { params }) {
   const { error } = await supabase.from('tickets')
     .delete()
     .eq('id', id)
-
+    
   return NextResponse.json({ error })
 }
